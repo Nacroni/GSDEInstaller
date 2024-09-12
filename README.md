@@ -1,5 +1,7 @@
 # GSDE Installer
 
+> **WARNING: THIS PROGRAM HAS NOT BEEN TESTED PROPERLY.** Use with caution, and feel free to post issues with the program.
+
 This is an easy-to-use installer for [GNUstep Desktop](https://github.com/onflapp/gs-desktop).
 
 ## Support
