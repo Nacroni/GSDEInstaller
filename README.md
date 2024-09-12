@@ -1,4 +1,4 @@
-# GNUstep Destkop Installer
+# GNUstep Desktop Installer
 
 > **WARNING: THIS PROGRAM HAS NOT BEEN TESTED PROPERLY.** Use with caution, and feel free to post issues with the program.
 
