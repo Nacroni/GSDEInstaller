@@ -25,21 +25,17 @@ More coming soon...
 #### Debian
 
 - `Git`
-  - As root: `apt install git`
   - `sudo apt install git`
 - `Sudo`
   - As root: `apt install sudo`
 - `lsb_release`
-  - As root: `apt install lsb-release`
   - `sudo apt install lsb-release`
 
 #### Fedora
 
 - `Git`
-  - As root: `dnf install git`
   - `sudo dnf install git`
 - `lsb_release`
-  - As root: `dnf install lsb_release`
   - `sudo dnf install lsb_release`
 
 ## How to Install
