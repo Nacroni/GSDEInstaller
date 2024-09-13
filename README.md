@@ -7,7 +7,7 @@ This is an easy-to-use installer for [GNUstep Desktop](https://github.com/onflap
 ## Support
 
 - [x] [Debian GNU/Linux](https://debian.org/)
-- [ ] [Fedora GNU/Linux](https://fedoraproject.org/) *Abandoned support due to package issues*
+- [x] [Fedora GNU/Linux](https://fedoraproject.org/) *WINGs Display Manager `(wdm)` missing*
 
 More coming soon...
 
