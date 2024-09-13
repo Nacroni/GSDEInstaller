@@ -5,7 +5,7 @@ This is an easy-to-use installer for [GNUstep Desktop](https://github.com/onflap
 ## Support
 
 - [x] [Debian GNU/Linux](https://debian.org/)
-- [x] [Fedora GNU/Linux](https://fedoraproject.org/) *Still indev!*
+- [ ] [Fedora GNU/Linux](https://fedoraproject.org/) *Abandoned support due to package issues*
 
 More coming soon...
 
