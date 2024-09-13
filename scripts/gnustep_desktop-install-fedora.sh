@@ -24,7 +24,7 @@
 # Install deps for GSDE
 	printf "Installing dependencies...\n"
     sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-	cat ../deps/gnustep_desktop-deps-fedora.list | xargs sudo dnf install -y
+	cat ./deps/gnustep_desktop-deps-debian.list | xargs sudo dnf install -y
 	sudo dnf install xorg-x11-server -y ## just to make sure ;-)
 
 # Clone GSDE Git
