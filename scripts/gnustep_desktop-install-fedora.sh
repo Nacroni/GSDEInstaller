@@ -20,17 +20,16 @@
 			sudo dnf install git || echo "Whoops! Something went wrong. Maybe try installing Git on your own?"
 		fi
 
-
-# Install deps for GSDE
-	printf "Installing dependencies...\n"
-    sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-	cat ./deps/gnustep_desktop-deps-fedora.list | xargs sudo dnf install -y
-	sudo dnf install xorg-x11-server-Xdmx xorg-x11-server-Xephyr xorg-x11-server-Xnest xorg-x11-server-Xorg xorg-x11-server-Xvfb xorg-x11-server-common xorg-x11-server-devel xorg-x11-server-source -y ## just to make sure ;-)
-
 # Clone GSDE Git
 	mkdir ~/GSDEGit/
 	cd ~/GSDEGit/ && git clone https://github.com/onflapp/gs-desktop
 	printf "The GSDE folder should now be located in '~/GSDEGit/gs-desktop/' or '/home/$USER/GSDEGit/gs-desktop/'.\n"
+
+# Install deps for GSDE
+	printf "Installing dependencies...\n"
+    sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+	cat ~/GSDEGit/gs-desktop/Dependencies/fedora.txt | tr "\n" " " | xargs sudo dnf install -y
+	sudo dnf install xorg-x11-server-Xdmx xorg-x11-server-Xephyr xorg-x11-server-Xnest xorg-x11-server-Xorg xorg-x11-server-Xvfb xorg-x11-server-common xorg-x11-server-devel xorg-x11-server-source -y ## just to make sure ;-)
 
 # Fetch the world!
 	cd ~/GSDEGit/gs-desktop/

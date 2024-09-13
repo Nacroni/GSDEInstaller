@@ -38,15 +38,15 @@
 			exit
 		fi
 
-# Install deps for GSDE
-	printf "Installing dependencies...\n"
-	cat ./deps/gnustep_desktop-deps-debian.list | xargs sudo apt install -y 
-	sudo apt install xorg -y ## just to make sure ;-)
-
 # Clone GSDE Git
 	mkdir ~/GSDEGit/
 	cd ~/GSDEGit/ && git clone https://github.com/onflapp/gs-desktop
 	printf "The GSDE folder should now be located in '~/GSDEGit/gs-desktop/' or '/home/$USER/GSDEGit/gs-desktop/'.\n"
+
+# Install deps for GSDE
+	printf "Installing dependencies...\n"
+	cat ~/GSDEGit/gs-desktop/Dependencies/debian.txt | tr "\n" " " | xargs sudo apt install -y 
+	sudo apt install xorg -y ## just to make sure ;-)
 
 # Fetch the world!
 	cd ~/GSDEGit/gs-desktop/
