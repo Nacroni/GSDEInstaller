@@ -40,7 +40,7 @@
 
 # Install deps for GSDE
 	printf "Installing dependencies...\n"
-	cat ../deps/gnustep_desktop-deps-debian.list | xargs sudo apt install -y 
+	cat ./deps/gnustep_desktop-deps-debian.list | xargs sudo apt install -y 
 	sudo apt install xorg -y ## just to make sure ;-)
 
 # Clone GSDE Git
