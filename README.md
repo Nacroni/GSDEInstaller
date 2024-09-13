@@ -1,4 +1,6 @@
-# GNUstep Desktop Installer
+# GNUstep Desktop Installer (Developer Branch)
+
+> ***IMPORTANT:*** This is the Developer branch, where features are added before they are tested properly. **USE WITH CAUTION.**
 
 This is an easy-to-use installer for [GNUstep Desktop](https://github.com/onflapp/gs-desktop).
 
