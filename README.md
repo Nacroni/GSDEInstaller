@@ -1,7 +1,5 @@
 # GNUstep Desktop Installer
 
-> **WARNING: THIS PROGRAM HAS NOT BEEN TESTED PROPERLY.** Use with caution, and feel free to post issues with the program.
-
 This is an easy-to-use installer for [GNUstep Desktop](https://github.com/onflapp/gs-desktop).
 
 ## Support
@@ -46,7 +44,7 @@ It's simple! Make sure to give the `./gnustep_desktop-install.sh` script (and al
 chmod +x ./gnustep_desktop-install.sh
 ```
 
-And all you have to do is to run it. It should automatically detect the distro of GNU/Linux you're running and execute the correct script. If it doesn't, then you can check the `./scripts/` directory and run the script manually.
+And all you have to do is to run it. It should automatically detect the distro of GNU/Linux you're running and execute the correct script. If it doesn't, then you can check the `./scripts/` directory and run the script manually. You will have to modify the script to change a "." to ".." for the dependency install listing if you want to install it manually.
 
 ## License
 
