@@ -25,7 +25,7 @@
 	printf "Installing dependencies...\n"
     sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 	cat ./deps/gnustep_desktop-deps-fedora.list | xargs sudo dnf install -y
-	sudo dnf install xorg-x11-server -y ## just to make sure ;-)
+	sudo dnf install xorg-x11-server-Xdmx xorg-x11-server-Xephyr xorg-x11-server-Xnest xorg-x11-server-Xorg xorg-x11-server-Xvfb xorg-x11-server-common xorg-x11-server-devel xorg-x11-server-source -y ## just to make sure ;-)
 
 # Clone GSDE Git
 	mkdir ~/GSDEGit/
