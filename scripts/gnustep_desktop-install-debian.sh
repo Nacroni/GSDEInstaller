@@ -40,12 +40,12 @@
 
 # Install deps for GSDE
 	printf "Installing dependencies...\n"
-	cat ../deps/gnustep_desktop-deps-debian.list | xargs sudo apt install
+	cat ../deps/gnustep_desktop-deps-debian.list | xargs sudo apt install -y 
 	sudo apt install xorg -y ## just to make sure ;-)
 
 # Clone GSDE Git
 	mkdir ~/GSDEGit/
-	git clone https://github.com/onflapp/gs-desktop -C ~/GSDEGit/
+	cd ~/GSDEGit/ && git clone https://github.com/onflapp/gs-desktop
 	printf "The GSDE folder should now be located in '~/GSDEGit/gs-desktop/' or '/home/$USER/GSDEGit/gs-desktop/'.\n"
 
 # Fetch the world!
@@ -57,7 +57,7 @@
 
 # Build the world!
 	cd ~/GSDEGit/gs-desktop/
-	./build_world.sh
+	sudo -E ./build_world.sh
 	printf "The world has been built!\n"
 
 # Install GSDE
@@ -67,6 +67,6 @@
 		cd ~/GSDEGit/gs-desktop/
 		sudo chmod +x ./config/install_wdm.sh
 		sudo ./config/install_wdm.sh
-		printf "WDM has been installed! :-)"
+		printf "WDM has been installed! :-)\n"
 
 printf "GNUstep Desktop has been successfully installed!\n" && exit
