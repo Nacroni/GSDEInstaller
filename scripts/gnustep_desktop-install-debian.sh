@@ -30,11 +30,11 @@
 				printf "\nYou do not have superuser permissions. Please try again as superuser.\n"
 				exit 1
 			fi
-			printf "Sudo should now be installed.\n"
-			printf "To give your user sudo permissions, do:\n"
-			printf "# usermod -aG sudo $USER\n"
-			printf "as root (either logging in as root or doing 'su -')\n"
-			printf "Please run this installer as Sudo on your main account.\n"
+			echo "Sudo should now be installed."
+			echo "To give your user sudo permissions, do:"
+			echo "# usermod -aG sudo $USER"
+			echo "as root (either logging in as root or doing 'su -')"
+			echo "Please run this installer as Sudo on your main account."
 			exit
 		fi
 

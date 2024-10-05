@@ -23,19 +23,18 @@
 
 # Install deps for GSDE
 	printf "Installing dependencies...\n"
-    sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+    sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm
 	cat ./deps/gnustep_desktop-deps-fedora.list | xargs sudo dnf install -y
 	sudo dnf install xorg-x11-server-Xdmx xorg-x11-server-Xephyr xorg-x11-server-Xnest xorg-x11-server-Xorg xorg-x11-server-Xvfb xorg-x11-server-common xorg-x11-server-devel xorg-x11-server-source -y ## just to make sure ;-)
 
 # Clone GSDE Git
 	mkdir ~/GSDEGit/
 	cd ~/GSDEGit/ && git clone https://github.com/onflapp/gs-desktop
-	printf "The GSDE folder should now be located in '~/GSDEGit/gs-desktop/' or '/home/$USER/GSDEGit/gs-desktop/'.\n"
+	echo "The GSDE folder should now be located in '~/GSDEGit/gs-desktop/' or '/home/$USER/GSDEGit/gs-desktop/'."
 
 # Fetch the world!
-	cd ~/GSDEGit/gs-desktop/
+	cd ~/GSDEGit/gs-desktop/ || echo "cd failed! make sure that the GSDE folder at ~/GSDEGit/gs-desktop exists. exiting..."; exit 2
 	sudo chmod +x ~/GSDEGit/gs-desktop/fetch_world.sh
-	cd ~/GSDEGit/gs-desktop/
 	./fetch_world.sh
 	printf "The world has been fetched!\n"
 
@@ -48,7 +47,7 @@
 	## Run the WDM installer in the Git repo
 		printf "Before you continue with the installation, if you need to switch to TTY1 (to logout, or do something important), you can do such by using Ctrl + Alt + F1.\n"
 		read -rsp $'\nPress any key to continue, press CTRL+C to cancel.\n' -n1 key
-		cd ~/GSDEGit/gs-desktop/
+		cd ~/GSDEGit/gs-desktop/ || echo "cd failed! make sure that the GSDE folder at ~/GSDEGit/gs-desktop exists. exiting..."; exit 2
 		sudo chmod +x ./config/install_wdm.sh
 		sudo ./config/install_wdm.sh
 		printf "WDM has been installed! :-)\n"
